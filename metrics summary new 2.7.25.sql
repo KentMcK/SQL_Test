@@ -264,3 +264,8 @@ and e.[TimeStamp] >='12/1/2024'
 and e.[TimeStamp] <'1/1/2025'
 and csrc.FK_ParentCompanyId = 108 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+select a.name, c.name, a.ID, a.UserId,  a.Eid from dbo.Associates a
+join dbo.Clients c ON c.PK_ClientId = a.FK_ClientId
+where c.name like '%field service%' 
+and a.Eid is not null 
+('ehmm5l0','e5w5cqp','e9tst43','ehocgda','eajc756','e9tst43')
